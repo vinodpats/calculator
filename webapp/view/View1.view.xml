@@ -1,9 +1,34 @@
 <mvc:View controllerName="com.pats.calculator.controller.View1" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
-	displayBlock="true" xmlns="sap.m">
+	displayBlock="true" xmlns="sap.m" xmlns:sap.ui.layout.form="sap.ui.layout.form">
 	<App id="idAppControl">
 		<pages>
-			<Page title="{i18n>title}">
-				<content></content>
+			<Page title="Calculator">
+				<content>
+					<sap.ui.layout.form:SimpleForm xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns:sap.ui.core="sap.ui.core" editable="true"
+						layout="ResponsiveGridLayout" id="__form0"
+			labelSpanXL="3"
+			labelSpanL="3"
+			labelSpanM="3"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="4"
+			emptySpanL="4"
+			emptySpanM="4"
+			emptySpanS="0"
+			columnsXL="1"
+			columnsL="1"
+			columnsM="1">
+						<sap.ui.layout.form:content>
+							<Label text="First number"/>
+							<Input type="Number" id="inp1"/>
+							<Label text="Second number"/>
+							<Input type="Number" id="inp2"/>
+								<Label/>
+							<Button width="30%" text="Add" press="onAdd" id="addButton"/>
+						</sap.ui.layout.form:content>
+					</sap.ui.layout.form:SimpleForm>
+
+				</content>
 			</Page>
 		</pages>
 	</App>
